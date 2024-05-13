@@ -1,0 +1,340 @@
+DAY 1
+
+1)Sort an array of 0's 1's & 2's
+
+ DUTCH NATIONAL FLAG ALGORITHM
+
+In this we keep a pointer low at 0,mid at 0 ,high at n-1 ,
+our goal is all zero must come at left of low
+all 2 at right of high
+So we if mid=0 we swap with low and increase both
+if mid =1 we increase mid (no change)
+if mid =2 we swap with high and decraese high we dont do anything to mid cause after exchange it may took another swap
+so we want mid to stay there
+
+2)Find the repeating and the missing
+
+ Approach 2 using xor 
+ 1 we xor given array item with 1 to n so we will din xor of missing and repeating say x any y
+ now there must be a set bit either in x or in y ,we find rightmost set bit 
+ now we divide into two set numbers having rightmost set nit and others not having in given array 
+now xor with rightmost bit sets with groups dividen in all 1to n we get x from first and y from second
+
+
+3) 
+
+ merging two sorted array without extra space
+intution let it be array of size m+n ,we will swap with 
+Implementaion of gap method ,gap =ceil(gap/2);
+
+
+4) Kadanes algorithm cumulative sum
+
+5) merge intervals
+
+    brute method
+
+6)repeating number without using extra space
+
+
+
+# approach 1 flip when you see an positive flip it negative 
+
+so what we do is we iterate over array and makes the digit -ve for value of  arr[i] value now arr[i] will repeat for at least 1 i 
+we see that value is already negative so arr[i] was repeating
+
+#
+approach 2 tortoise we will traverse  one with slow pointer another with fast pointer
+such way we will jump to index equal to value of previous index i.e a[i]
+as 2 value is same at different index they will form a loop they will meet at a distance now
+we place the fast pointer at starting and move it by 1 only when they will meet the of  index will be repeated value
+proof in video ,index because were parsing value only
+
+
+_____________________________________________________________________________________________________________________________
+
+DAY 2
+
+1) making rows and column 0 of that element which is 0
+
+#use first row and column of matrix as extra storage 
+
+2) Pascal triangle 
+#brute observation 
+
+// brute logical approach is best based upon the fact that there will be 1's at the end and middle elements will be sum of
+// above column and one preecedding it
+
+#NcR method
+
+3)Next permutation
+Find the largest index k such that nums[k] < nums[k + 1]. If no such index exists, just reverse nums and done.
+Find the largest index l > k such that nums[k] < nums[l].
+Swap nums[k] and nums[l].
+Reverse the sub-array nums[k + 1:].
+
+
+4)
+
+
+5)Best day to buy and sell stock
+#you maintain a minimum while you traversing and calculate profit uptill now return max profit
+
+6)Rotate a matrix
+#first transpose matrix then reverse each row
+
+
+_____________________________________________________________________________________________________________________________
+
+DAY 3)
+
+1)Finding element in row wise and column wise sorted array
+#)staircase if rows and columns are seprated 
+#)binary over 0........m*n array
+
+2)calculate pow(x,n)
+#while n>0 if n&1=1 ans=ans*x else x=x*x; n=n>>1;
+
+3) element>n/2
+
+// moose voting algorithm
+
+// idea is if majority element is +1 and all minority is -1 then sum has to be atleast 1 or greater than that
+// if element is same as previous +1 else -1
+
+4)element >n/3
+// moose voting system updated
+// numbers greater than n/3 ,there can be at most 2 such numbers
+// so we find two majority numbers then cnt their repetitions and check if > n/3;
+
+5)no of unique path
+#)Dp recursion with memiozation
+
+#
+// for example for 3*2 martrix one could go 
+// R R D
+// D R R
+// R D R 
+// so if we decide to put right moves(column) there is only one way for down
+// or if we could decide down moves(column) there is only one total way to fill right
+// total no of ways is m-1 + n-1 = m+n-2
+// so our solution is m+n-2 c m-1 or m+n-2 c n-1
+
+
+6)
+
+
+_____________________________________________________________________________________________________________________________
+
+DAY 4)
+
+1) Two sum - using hashmap
+
+2)4 sum - using two loops , and two pointers
+
+
+3)longest consecutive sum
+// by using hash map  ,fist we will push all the elemets in map
+// then we will pick the lowest element available in series and start counting from there
+// O(n)+O(n)+O(n)
+
+4)longest subarray sum 0
+// brute force ,O(n^2) compute subarray sum, maintain max lenth
+
+// Optimized version maintain prefix sum ,if 0 then maintain leth , or if prefix sum repeats means it has been 0 in between
+// so minus the indexes
+
+5)subarray with Xor equal to maintain
+
+6)longest non repeating char subarray
+#using hasmap and two pointers left and right
+
+___________________________________________________________________________________________________________________________-
+
+Day 5)
+
+1) Reverse a linked list
+
+
+2)Find the middle of the linked list
+#using two while loop
+#using fast and slow pointer
+
+
+3)Merge two linked list
+
+
+
+4)Remove Nth Node From End of List
+#using two while loop
+#using fast slow pointer and dummy pointer
+
+5)delete the given Node
+#copy next node data and next=next->next;
+
+6)add 2 numbers 
+#keep a carry and sum 
+
+___________________________________________________________________________________________________________________________
+
+DAY 6
+
+1)Find intersection point
+#use two while loop
+#use hashmap
+#most optimum run them in cross loop once so they start with added difference and check
+
+2)If a loop exists
+#use hasmap
+#use slow and fast pointer 
+
+
+3)reverse linked list in groups of size k
+
+
+
+4)is linked list palindrome
+// 2 find mid point ,then reverse second half then put 1 pointer at start 
+
+
+5)Finding the head of starting point of loop
+# brute force use hashmap
+#slow pointer fast pointer where first meet then start entry pointer from start and where this meet with slow pointer
+
+
+6)Flatenning of a linked list
+#use a vector to store 
+#using merge sort by taking two list at a time
+
+7)rotate right linked list by k
+
+___________________________________________________________________________________________________________________________________
+
+Day 7
+
+1)Deep copy of linked list
+//     creating extra node l2 in front of l1
+//         setting up random ones
+//   breaking links and joining for l2
+
+2)3 Sum
+
+// brute approach use 3 loops  and a set
+// first form a hash table then using two loop check for third element in hashmap
+// remove first two elements from hash while searching for third then add again ,add sorted elements in set
+// insertion in set is log(n)
+
+
+// most optimum one loop and two pointer in sorted array and manipulation for non repeating
+
+
+3)
+// Here is my idea: instead of calculating area by height*width, we can think it in a cumulative way. In other words, sum water amount of each bin(width=1).
+// Search from left to right and maintain a max height of left and right separately, 
+// which is like a one-side wall of partial container. Fix the higher one and flow water from the lower part.
+// For example, if current height of left is lower, we fill water in the left bin. 
+// Until left meets right, we filled the whole container.
+
+
+
+4)delete duplicate from sorted array
+
+5)Max consecutive ones
+
+_____________________________________________________________________________________________________________________________
+
+Day 8)
+
+1) Most meetings 
+
+2)max platform needed
+
+3)Max jobs
+
+4)Fractional Knapsack
+
+5)Coin exchange
+
+6)Most meetings
+
+__________________________________________________
+DAY 9)
+
+
+1) subset sum
+
+2)subsets 2 leetcode
+
+3)combination sum 1
+
+4)combination sum 2
+
+5)pallindrome partioning
+
+6) kth permutation
+hard do it again
+
+___________________________________________________________________________________________________________________________
+
+Day 10)
+
+1) All possible permutation
+
+2)queen placement
+
+3)Sudoku
+
+4) Later it usses graph
+
+5) rat in a maze
+
+_____________________________________________________________________________________________________________________________
+
+Day 15)
+
+## MOST IMPORTANT find function in string to find substring ##
+   size_t found = str.find(str1);
+    if (found != string::npos)
+        cout << "First occurrence is " << found << endl;
+        ######################3
+
+1) reverse words in string 
+
+2) longest palindrome
+#learn working of substr for all
+  for (int i = 0; i < n; i++)
+        for (int len = 1; len <= n - i; len++)
+            cout << s.substr(i, len) << endl;
+
+3)
+
+4)
+
+5)
+
+6)
+
+___________________________________________________________________________________________________________________________________
+
+DAy 16)
+
+
+___________________________________________________________________________________________________________________________
+Day 18)
+
+LCA in binary traverse
+
+#1) Find path of both the nodes store in vector and when they are not same that is answer
+
+#2) base case of(if root ==NULL or root==p or root==q){
+    return root
+}
+
+go left 
+go right if(left=NULL){
+    return right;
+}
+if right==NULL{
+    return left;
+}
+else return root
