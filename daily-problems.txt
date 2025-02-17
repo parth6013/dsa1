@@ -1,0 +1,3 @@
+14th Feb -> Product of the Last K Numbers
+1) do a normal loop
+2) create a cumilative product, reset it whenever 0 occurs cause usse pehle to 0 hoga hi toh push only cum prod until 0 occurs then 0 so if cum array.size < k then 0 size==k return cum[k-1] else: return cum[cum.back[]-cum.size()-k-1] 
