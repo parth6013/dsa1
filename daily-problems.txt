@@ -10,3 +10,14 @@ Letter Tile Possibilities
 repeat  this
 
 
+26th Feb) Maximum absolute sum of subarray
+ a a a a a
+_______(r)
+__(l)
+
+subarray sum = csum(r)-csum(l-1)
+what can be the max sum if csum[i]>0  csum[i] -(lowest negative value ) we have seen till them
+if csum[i]<0 - (highest positive value) we have seen till then 
+
+we can coclude it will be 
+This is because the sum of any subarray between indices i and j can be expressed as prefixSum[j] - prefixSum[i]. The greater the difference between prefixSum[j] and prefixSum[i], the larger the absolute sum of the subarray. Thus, to maximize this difference, prefixSum[j] should be as large as possible, while prefixSum[i] should be as small as possible.
