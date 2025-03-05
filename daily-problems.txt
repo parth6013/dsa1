@@ -2,14 +2,14 @@
 1) do a normal loop
 2) create a cumilative product, reset it whenever 0 occurs cause usse pehle to 0 hoga hi toh push only cum prod until 0 occurs then 0 so if cum array.size < k then 0 size==k return cum[k-1] else: return cum[cum.back[]-cum.size()-k-1] 
 
-
+####
 Letter Tile Possibilities
 1)Ahh so there are 26 letters we will make a freq array of letters, we will create a recursive call for each pos i in tiles.size() out of each pos we will start a loop through array for choice going forward decreasing that freq and out of loop again setting it back cause when loop starts at B for first position no frequency of A should still be same and this won't count repeated cases cause Out of 26 we can take A in one position once only 
 
 
 repeat  this
 
-
+#####
 26th Feb) Maximum absolute sum of subarray
  a a a a a
 _______(r)
@@ -21,3 +21,22 @@ if csum[i]<0 - (highest positive value) we have seen till then
 
 we can coclude it will be 
 This is because the sum of any subarray between indices i and j can be expressed as prefixSum[j] - prefixSum[i]. The greater the difference between prefixSum[j] and prefixSum[i], the larger the absolute sum of the subarray. Thus, to maximize this difference, prefixSum[j] should be as large as possible, while prefixSum[i] should be as small as possible.
+
+#####
+3rd March) Partition Array According to Given Pivot
+Brute which works O(n)
+1) find first pos of pivot
+2)create ans, post and mid vector
+all vec[n]<pivot[key]-> push ans
+vec[n]>pivot[key]-> post
+==pivot mid
+ans+=mid + post
+
+other is 
+calculate intial pos
+less than=l
+equal=m
+so pos will be 0,m and l+m for all three parts
+this will help us creating a vector of definite size than dynamic
+
+3rd is 2 pointers to taverse
