@@ -40,3 +40,6 @@ so pos will be 0,m and l+m for all three parts
 this will help us creating a vector of definite size than dynamic
 
 3rd is 2 pointers to taverse
+
+12th March) maximum-count-of-positive-integer-and-negative-integer
+Use binary search upper bound and lower bound
