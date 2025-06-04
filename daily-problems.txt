@@ -43,3 +43,10 @@ this will help us creating a vector of definite size than dynamic
 
 12th March) maximum-count-of-positive-integer-and-negative-integer
 Use binary search upper bound and lower bound
+
+########
+4th June https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes
+
+1) So it is like we have to check for each box when we get a box I was doing DFS as intutive bruteforce
+2) What we can do is maitain a queue and start pushing boxes which are open or we have a key
+3) Or we can DO Bfs untill we can't open a box or no box is left
