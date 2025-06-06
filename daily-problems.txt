@@ -50,3 +50,9 @@ Use binary search upper bound and lower bound
 1) So it is like we have to check for each box when we get a box I was doing DFS as intutive bruteforce
 2) What we can do is maitain a queue and start pushing boxes which are open or we have a key
 3) Or we can DO Bfs untill we can't open a box or no box is left
+
+
+https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/description/?envType=daily-question&envId=2025-06-04
+
+1) if friend==1 return the whole word otherwise, lenth will be words.size() - num_of_friends +1
+2) Find the lexicographically largest alphabet if repeating twice store index and create string ans = (ele <= n - i) ? word.substr(i, ele) : word.substr(i); means if greater than ele then extract substring of length ele otherwise till the end word.substr(i) compare between them and return
