@@ -56,3 +56,8 @@ https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the
 
 1) if friend==1 return the whole word otherwise, lenth will be words.size() - num_of_friends +1
 2) Find the lexicographically largest alphabet if repeating twice store index and create string ans = (ele <= n - i) ? word.substr(i, ele) : word.substr(i); means if greater than ele then extract substring of length ele otherwise till the end word.substr(i) compare between them and return
+
+#######
+6th june
+https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/solutions/6816172/beats-super-easy-beginners-java-c-c-python-javascript-dart/
+do it again not able to get answer
