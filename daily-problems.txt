@@ -106,3 +106,16 @@ public:
 };
 
 Okay remember whenever alphabet lexicographically use of frequency map
+
+
+7th June https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars/solutions/6815463/lexicographically-minimum-string-after-removing-stars/?source=submission-ac
+
+According to the problem statement, whenever a * is encountered, we must remove the smallest character (in lexicographical order) to its left. To ensure that the resulting string is as lexicographically small as possible, and following the greedy principle, it's better to remove characters from the end rather than the beginning. This helps keep the smaller characters closer to the front, which contributes to minimizing the overall lexicographical order of the string.
+
+We traverse the string s from left to right. Since the string contains only lowercase letters, we use 26 stacks to store the indices of each character we've seen so far. The k-th stack stores the indices of the k-th lowercase letter (a corresponds to 0, b to 1, and so on).
+
+When we encounter a *, we find the non-empty stack with the smallest lexicographical character, mark the corresponding character in the string s as *, and remove the index from the top of that stack.
+When we encounter a non-* character, we push its index into the corresponding stack.
+The final answer is formed by selecting all characters from left to right in the string s that are not *
+
+Greedy did same
