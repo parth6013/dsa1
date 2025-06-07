@@ -61,3 +61,48 @@ https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the
 6th june
 https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/solutions/6816172/beats-super-easy-beginners-java-c-c-python-javascript-dart/
 do it again not able to get answer
+
+class Solution {
+public:
+    string robotWithString(string s) {
+
+        map<char,int> mpp;
+        stack<char> stk;
+        string lstring;
+
+        //Lets create a frequency map to determine each time of there is a char left
+        // how it helps instead of going over whole string(n) we go over constant 26
+
+        for(int i=0;i<s.size();i++){
+            mpp[s[i]]++;
+        }
+
+        // Now we will hover over string see if we have some lexigropahically small char then 
+        //we'll push into stack other wise pop
+
+
+        char minChar='a';
+        for(int i=0;i<s.size();i++){
+
+            stk.push(s[i]);
+            mpp[s[i]]--; // remove 1 frequency of that char
+
+            // this is the 2nd element 
+            while(minChar!='z' && mpp[minChar]==0){
+                minChar++;
+            }
+
+            while(!stk.empty() && stk.top()<=minChar){
+
+                lstring+=stk.top();
+                stk.pop();
+
+            }
+
+        }
+
+        return lstring;
+    }
+};
+
+Okay remember whenever alphabet lexicographically use of frequency map
